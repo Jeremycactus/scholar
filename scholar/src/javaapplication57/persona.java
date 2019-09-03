@@ -12,7 +12,7 @@ public class persona {
     public String direccion;
     public String correo_electronico;
     public String genero;
-
+    public String edad;
     public String getNombre() {
         return nombre;
     }
@@ -95,7 +95,10 @@ public class persona {
 public void printname (){
     System.out.println(this.nombre + " "+ this.apellido);
 }
-
+public String clacEdad () {
+    return this.fecha_nacimiento ;
+    
+}
 }
 
 

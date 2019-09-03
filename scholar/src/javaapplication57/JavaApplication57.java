@@ -20,7 +20,10 @@ public class JavaApplication57 {
         estudiante1.apellido = "franco";
         //System.out.println("el estudiante se llama " + estudiante1.nombre + estudiante1.apellido);
         estudiante1.printname();
-
+        estudiante1.fecha_nacimiento ="2002/03/04";
+        System.out.println("la fecha de nacimiento es: " + estudiante1.fecha_nacimiento);
+        System.out.println("edad: "+estudiante1.clacEdad());
+        estudiante1.clacEdad();
     }
 
 }
