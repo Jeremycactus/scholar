@@ -1,5 +1,7 @@
 package javaapplication57;
 
+import java.util.Date;
+
 public class persona {
 
     public String nombre;
@@ -12,7 +14,7 @@ public class persona {
     public String direccion;
     public String correo_electronico;
     public String genero;
-    public String edad;
+    public int edad;
     public String getNombre() {
         return nombre;
     }
@@ -95,10 +97,27 @@ public class persona {
 public void printname (){
     System.out.println(this.nombre + " "+ this.apellido);
 }
-public String clacEdad () {
-    return this.fecha_nacimiento ;
+  public static int ClacEdad (int dia, int mes, int anio){
+        
+    Date actual = new Date ();
+    
+    int diaActual = actual.getDate();
+    int mesActual = actual.getMonth()+1;
+    int anioActual = actual.getYear()+1900;
+    
+    int diferencia = anioActual - anio;
+    
+    if(mesActual<=mes ){
+      if(mesActual==mes){
+          if(dia > diaActual ){
+              diferencia--;
+          }
+      } else{
+          diferencia--;
+      }
+    }
+    return diferencia;
     
 }
 }
-
 
