@@ -6,7 +6,8 @@ public class persona {
 
     public String nombre;
     public String apellido;
-    public String fecha_nacimiento;
+    public int fecha_nacimiento = 2002;
+    public int fecha_actual = 2019;
     public String tipo_sangre;
     public String nacionalidad;
     public String identificacion;
@@ -97,27 +98,8 @@ public class persona {
 public void printname (){
     System.out.println(this.nombre + " "+ this.apellido);
 }
-  public static int ClacEdad (int dia, int mes, int anio){
-        
-    Date actual = new Date ();
-    
-    int diaActual = actual.getDate();
-    int mesActual = actual.getMonth()+1;
-    int anioActual = actual.getYear()+1900;
-    
-    int diferencia = anioActual - anio;
-    
-    if(mesActual<=mes ){
-      if(mesActual==mes){
-          if(dia > diaActual ){
-              diferencia--;
-          }
-      } else{
-          diferencia--;
-      }
-    }
-    return diferencia;
-    
-}
+ public int ClacEdad (){
+     return fecha_actual - fecha_nacimiento;
+ }
 }
 
