@@ -1,5 +1,7 @@
 package javaapplication57;
 
+import javax.swing.JFrame;
+
 /*import java.util.Date;*/
 
 
@@ -14,21 +16,26 @@ public class JavaApplication57 {
         empleado1.correo_electronico = "jeremycarrasquilla@gmail.com";
         empleado1.fecha_nacimiento = "04/03/2002";
         empleado1.genero = "Masculino";
+        empleado1.ClacEdad();
         System.out.println("el empleado se llama " + empleado1.nombre + empleado1.apellido);
         
         estudiante estudiante1 = new estudiante();
         estudiante1.nombre = "Franco ";
         estudiante1.apellido = "Rubem";
         System.out.println("el estudiante se llama " + estudiante1.nombre + estudiante1.apellido);
-        estudiante1.fecha_nacimiento ="2002/03/04";
+        estudiante1.fecha_nacimiento ="02/03/2004";
+        estudiante1.ClacEdad();
         System.out.println("la fecha de nacimiento es: " + estudiante1.fecha_nacimiento);
         
-        System.out.println("edad: ");
+        
         
        
         ventana v1 = new ventana();
            
-        v1.setVisible(true); // visible la ventana
+        v1.setVisible(true); // Hacemos visible la ventana
+          
+        
+        
     }
 }
         
