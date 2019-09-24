@@ -1,13 +1,16 @@
 package javaapplication57;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+//import java.util.Locale;
+
 
 public class persona {
 
     public String nombre;
     public String apellido;
-    public int fecha_nacimiento = 2002;
-    public int fecha_actual = 2019;
+    public String fecha_nacimiento;
     public String tipo_sangre;
     public String nacionalidad;
     public String identificacion;
@@ -98,8 +101,11 @@ public class persona {
 public void printname (){
     System.out.println(this.nombre + " "+ this.apellido);
 }
- public int ClacEdad (){
-     return fecha_actual - fecha_nacimiento;
- }
+  public void ClacEdad (){
+      DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+      LocalDate dob = LocalDate.parse(this.fecha_nacimiento, fmt);
+      LocalDate nowDate = LocalDate.now();
+      Period period = Period.between(dob, nowDate);
+      System.out.println("La edad es: "+ period.getYears());
+}    
 }
-

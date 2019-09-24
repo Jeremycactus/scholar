@@ -11,14 +11,9 @@ package javaapplication57;
  */
 public class estudiante extends persona {
 
-    void calcEdad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void clacEdad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  
     }
 
    
 
-}
+
