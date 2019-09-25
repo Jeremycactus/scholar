@@ -35,7 +35,8 @@ public class JavaApplication57 {
         v1.setVisible(true); // Hacemos visible la ventana
           
         
-        
+       Ventana2 v2 = new Ventana2();
+       v2.setVisible(true);//se hace la ventana2
     }
 }
         
