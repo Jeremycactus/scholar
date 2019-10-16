@@ -23,6 +23,20 @@ public class persona {
         return nombre;
     }
 
+    public persona() {
+        this.nombre = "";
+        this.apellido = "";
+        this.fecha_nacimiento = "";
+        this.tipo_sangre = "";
+        this.nacionalidad = "";
+        this.identificacion = "";
+        this.telefono = "";
+        this.direccion = "";
+        this.correo_electronico = "";
+        this.genero = "";
+        this.edad = 0;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
